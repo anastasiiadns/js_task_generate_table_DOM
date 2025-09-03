@@ -371,7 +371,7 @@ for (const person of people) {
   const century = document.createElement('td');
 
   names.textContent = person.name;
-  gender.textContent = person.sex === 'm' ? 'Male' : 'Female';
+  gender.textContent = person.sex;
   born.textContent = person.born;
   died.textContent = person.died;
   age.textContent = years;
