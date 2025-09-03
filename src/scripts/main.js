@@ -354,9 +354,10 @@ const people = [
   },
 ];
 
-const tables = document.querySelector('.dashboard');
-
 for (const person of people) {
+  const tables = document.querySelector('.dashboard');
+  const tbody = tables.querySelector('tbody') || tables;
+
   const years = person.died - person.born;
   const centuryСalculation = Math.ceil(person.died / 100);
 
@@ -383,5 +384,5 @@ for (const person of people) {
   str.appendChild(age);
   str.appendChild(century);
 
-  tables.appendChild(str);
+  tbody.appendChild(str);
 }
